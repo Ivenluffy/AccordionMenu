@@ -214,7 +214,7 @@
 
     //#endregion
 
-    //#region 颜色梯度渐变区间段
+    //#region 颜色梯度渐变
     /**
      * 渐变颜色组
      * @param {string} startColor -开始渐变色(HEX十六进制颜色码)
