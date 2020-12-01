@@ -9,7 +9,7 @@
     var opts = {
         idField: 'Id',//字段名
         parentField: 'ParentId',//父节点字段名
-        nameField: 'MenuName',//节点显示文本
+        nameField: 'MenuName',//节点显示文本字段名
         iconField:'MenuIcon',//节点图标字段，如bootstrap等的字体图标类名
         sortName:'Seq',//节点排序的字段名称
         sortOrder:'asc',//节点排序方式asc/desc
