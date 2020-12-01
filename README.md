@@ -13,7 +13,7 @@
         iconField:'MenuIcon',//节点图标字段，如bootstrap等的字体图标类名
         sortName:'Seq',//节点排序的字段名称
         sortOrder:'asc',//节点排序方式asc/desc
-        childrenField: 'children',//子节点集
+        childrenField: 'children',//子节点字段名
         url: '',//url加载数据初始化菜单。优先以传参data数组数据初始化菜单,若不传参则以url方式加载初始化
         ajaxType:'',//请求类型，默认get
         ajaxData:'',//请求参数数据
@@ -22,7 +22,7 @@
         indentStep:1,//菜单层级缩进数值(单位em)
         startColor:'#18626b',//菜单开始背景色
         endColor:'#2fb9ca',//菜单最终背景色
-        colorCount:'5',//开始至结束背景色过渡段数
+        colorCount:'5',//开始至结束每层级菜单背景色过渡段数
         speed:500,//滑动速度。菜单滑动展开/收缩所用时间(ms)
         onnodeclick: clickFn,//菜单节点点击
         onnodemouseenter:enterFn,//鼠标进入节点
