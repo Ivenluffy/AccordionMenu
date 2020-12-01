@@ -31,11 +31,14 @@
     color: #fff;
     text-decoration: none;
     position: relative;
-    box-sizing: border-box;
     white-space: nowrap;
+    -ms-text-overflow: ellipsis;
     text-overflow: ellipsis;
     overflow: hidden;
     cursor: default;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 .accordion ul li .menuitem > i {
@@ -56,11 +59,25 @@
     border: 6px solid;
     width: 0;
     height: 0;
-    transition: transform .5s;
     border-color: transparent transparent transparent #fff;
     position: absolute;
     right: 4px;
     top: 8px;
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+    -webkit-transform-origin: left;
+    -moz-transform-origin: left;
+    -ms-transform-origin: left;
+    -o-transform-origin: left;
+    transform-origin: left;
+    -webkit-transition: transform .3s;
+    -moz-transition: transform .3s;
+    -ms-transition: transform .3s;
+    -o-transition: transform .3s;
+    transition: transform .3s;
 }
 
 .accordion ul li .menuitem.submenu {
@@ -72,9 +89,12 @@
 }
 
 .accordion ul li .menuitem.submenu.iconopen::after {
-    border-width: 6px;
-    right: 6px;
-    border-color: #fff transparent transparent transparent;
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    transform: rotate(90deg);
+
 }
 
 .accordion ul li .menuitem.activeitem::before {
@@ -98,8 +118,3 @@
     color: #ffff00;
     opacity: 0.8;
 }
-
-
-
-
-
