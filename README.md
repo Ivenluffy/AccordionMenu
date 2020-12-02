@@ -6,6 +6,7 @@
     <div id='menu'></div>
     
     //js
+    //var json=[...]
     var opts = {
         idField: 'Id',//字段名
         parentField: 'ParentId',//父节点字段名
