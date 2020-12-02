@@ -24,7 +24,7 @@
         startColor:'#18626b',//菜单开始背景色(HEX十六进制颜色码)
         endColor:'#2fb9ca',//菜单最终背景色(HEX十六进制颜色码)
         colorCount:'5',//开始至结束背景色过渡段数
-        speed:500,//滑动速度。菜单滑动展开/收缩所用时间(ms)
+        speed:500,//滑动速度。菜单完成滑动展开/收缩所用时间(ms)
         onnodeclick: clickFn,//菜单节点点击
         onnodemouseenter:enterFn,//鼠标进入节点
         onnodemouseleave:leaveFn,//鼠标离开节点
