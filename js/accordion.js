@@ -117,12 +117,20 @@
     }
 
     /**
+<<<<<<< HEAD
      * 获取梯度渐变颜色组
+=======
+     * 获取渐变梯度颜色组
+>>>>>>> 1886af575494feeaa861d8b63e7415a68885d4ef
      * @param {string} sColor -开始渐变色(HEX十六进制颜色码)
      * @param {string} eColor -结束渐变色(HEX十六进制颜色码)
      * @param {number} step -开始至结束颜色过渡段数
      * @returns {Array}
      */
+<<<<<<< HEAD
+=======
+
+>>>>>>> 1886af575494feeaa861d8b63e7415a68885d4ef
     function gradientColors(sColor, eColor, step) {
         var startRGB = getRgbColor(sColor);//转换为rgb数组模式
         var startR = startRGB[0];
@@ -294,7 +302,11 @@
     }
 
     /**
+<<<<<<< HEAD
      * 移除之前通过elData()法绑定的数据，返回当前dom节点
+=======
+     * 移除之前通过elData()法设置的数据，返回当前dom节点
+>>>>>>> 1886af575494feeaa861d8b63e7415a68885d4ef
      * @param {string} key -可选,规定要移除的数据的名称。如果没有规定名称，该方法将从被选元素中移除所有已存储的数据。
      * @returns {HTMLElement} 返回当前dom元素节点
      */
@@ -409,8 +421,13 @@
                 asTreeData: menu.getAttribute('asTreeData') ? toBool(menu.getAttribute('asTreeData')) : true,//菜单数组数据是否以树状数组展示
                 data: menu.getAttribute('data') || null,//初始化菜单的数据,url和data共存时优先使用data
                 indentStep: menu.getAttribute("indentStep") || 1,//菜单层级缩进数值(单位em)
+<<<<<<< HEAD
                 startColor: menu.getAttribute("startColor") || '#18626b',//菜单开始背景色(HEX十六进制颜色码)
                 endColor: menu.getAttribute("endColor") || '#2fb9ca',//菜单最终背景色(HEX十六进制颜色码)
+=======
+                startColor: menu.getAttribute("startColor") || '#18626b',//菜单开始背景色
+                endColor: menu.getAttribute("endColor") || '#2fb9ca',//菜单最终背景色
+>>>>>>> 1886af575494feeaa861d8b63e7415a68885d4ef
                 colorCount: menu.getAttribute("colorCount") || 5,//开始至结束每层级菜单背景色过渡段数
                 speed: menu.getAttribute("speed") || 400,//滑动速度。菜单滑动展开/收缩所用时间(ms)
                 onnodeclick: eval(menu.getAttribute("onnodeclick")) || null,//菜单节点点击
@@ -432,7 +449,11 @@
                 opts.ajaxData = parseObj(opts.ajaxData);
                 opts.data = parseObj(opts.data);
                 if (!opts.data) {
+<<<<<<< HEAD
                     urlGetData()
+=======
+                    urlInitData()
+>>>>>>> 1886af575494feeaa861d8b63e7415a68885d4ef
                 }
                 opts.data = getFmtData(opts.asTreeData);
                 if (opts.asTreeData) {
@@ -455,7 +476,11 @@
             /**
              * 根据url初始化菜单的数据
              */
+<<<<<<< HEAD
             function urlGetData() {
+=======
+            function urlInitData() {
+>>>>>>> 1886af575494feeaa861d8b63e7415a68885d4ef
                 var url = _this.options.url,
                     type = _this.options.ajaxType,
                     json = _this.options.ajaxData;
