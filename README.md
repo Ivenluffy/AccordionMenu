@@ -1,7 +1,7 @@
 # Accordion Menu
 
-![Accordion](https://github.com/Ivenluffy/AccordionMenu/blob/master/images/accordion.png)
-![Accordion](https://github.com/Ivenluffy/AccordionMenu/blob/master/images/accordion1.png)
+![Accordion](https://github.com/Ivenluffy/Accordion/blob/master/images/Accordion.png)
+![Accordion](https://github.com/Ivenluffy/Accordion/blob/master/images/Accordion1.png)
 ### 使用1：
     <div id='menu'></div>
     
@@ -10,11 +10,7 @@
         idField: 'Id',//字段名
         parentField: 'ParentId',//父节点字段名
         nameField: 'MenuName',//节点显示文本字段名
-<<<<<<< HEAD
         iconField:'MenuIcon',//节点图标字段，可对应用于bootstrap等的字体图标类名
-=======
-        iconField:'MenuIcon',//节点图标字段，如bootstrap等的字体图标类名
->>>>>>> 1886af575494feeaa861d8b63e7415a68885d4ef
         sortName:'Seq',//节点排序的字段名称
         sortOrder:'asc',//节点排序方式asc/desc
         childrenField: 'children',//子节点字段名
@@ -24,15 +20,9 @@
         asTreeData:false,//菜单数组数据是否以树状数组展示
         data: json,//初始化菜单的数据,url和data共存时优先使用data
         indentStep:1,//菜单层级缩进数值(单位em)
-<<<<<<< HEAD
         startColor:'#18626b',//菜单开始背景色(HEX十六进制颜色码)
         endColor:'#2fb9ca',//菜单最终背景色(HEX十六进制颜色码)
         colorCount:'5',//开始至结束背景色过渡段数
-=======
-        startColor:'#18626b',//菜单开始背景色
-        endColor:'#2fb9ca',//菜单最终背景色
-        colorCount:'5',//开始至结束每层级菜单背景色过渡段数
->>>>>>> 1886af575494feeaa861d8b63e7415a68885d4ef
         speed:500,//滑动速度。菜单滑动展开/收缩所用时间(ms)
         onnodeclick: clickFn,//菜单节点点击
         onnodemouseenter:enterFn,//鼠标进入节点
