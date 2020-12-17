@@ -25,10 +25,10 @@
         endColor:'#2fb9ca',//菜单最终背景色(HEX十六进制颜色码)
         colorCount:'5',//开始至结束背景色过渡段数
         speed:300,//滑动速度。菜单完成滑动展开/收缩所用时间(ms)
-        onnodeclick: clickFn,//菜单节点点击fn(sender,menu,e)
-        onnodemouseenter:enterFn,//鼠标进入节点fn(sender,menu,e)
-        onnodemouseleave:leaveFn,//鼠标离开节点fn(sender,menu,e)
-        onmenuready:renderFn//菜单加载渲染完后fn(menu)
+        onnodeclick: clickFn,//菜单节点点击fn(node,sender,ele,e)
+        onnodemouseenter:enterFn,//鼠标进入节点fn(node,sender,ele,e)
+        onnodemouseleave:leaveFn,//鼠标离开节点fn(node,sender,ele,e)
+        onmenuready:renderFn//菜单加载渲染完后fn(sender)
     };
     var menu=new Accordion("#menu",opts);
 ### 使用2：
@@ -41,7 +41,7 @@
     
     //js
     var menu=new Accordion(".menu");
-## 插件方法：
+## 方法：
     
     var menu=new Accordion('.menu');
     menu.init(opts)//根据配置项重生成菜单
