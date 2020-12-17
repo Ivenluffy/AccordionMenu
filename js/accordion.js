@@ -349,6 +349,9 @@
     }
 */
 
+
+    //#region slide平缓滑动动画效果
+
     /**
      * 获取dom元素的CSS属性的值
      * @param {HTMLElement} el -dom元素
@@ -427,17 +430,25 @@
         var slide = Symbol('slide').toString(),
             now = nowH(el),
             end = endH(el),
-            bt = parseNum(end.bt),
-            bb = parseNum(end.bb),
-            pt = parseNum(end.pt),
-            pb = parseNum(end.pb),
-            h = parseNum(end.h),
-            total = h + pt + pb + bt + bb,
+            // bt = parseNum(end.bt),
+            // bb = parseNum(end.bb),
+            // pt = parseNum(end.pt),
+            // pb = parseNum(end.pb),
+            // h = parseNum(end.h),
+            //total = h + pt + pb + bt + bb,
+            //sum = total - (parseNum(now.bt) + parseNum(now.bb) + parseNum(now.pt) + parseNum(now.pb) + parseNum(now.h)),
+            bt = parseNum(now.bt),
+            bb =  parseNum(now.bb),
+            pt =  parseNum(now.pt),
+            pb = parseNum(now.pb) ,
+            h = parseNum(now.h),
+            total=(parseNum(now.bt) + parseNum(now.bb) + parseNum(now.pt) + parseNum(now.pb) + parseNum(now.h)),
+            sum=0,
             finish = false,
-            sum = total - (parseNum(now.bt) + parseNum(now.bb) + parseNum(now.pt) + parseNum(now.pb) + parseNum(now.h)),
             speed = (millisecond ? total / millisecond : total / 300) * 5;
         el.style.cssText = el.style.cssText + 'overflow:hidden;';
         clearInterval(el[slide]);
+        console.log(el.parentNode.querySelector(':scope>a').getAttribute("data-id")+" : "+new Date().getTime())
         el[slide] = setInterval(function () {
             if (finish) {
                 clearInterval(el[slide]);
@@ -445,6 +456,8 @@
                 if (slide in el) {
                     delete el[slide]
                 }
+                console.log(el.parentNode.querySelector(':scope>a').getAttribute("data-id")+" : "+new Date().getTime())
+                return finish;
             } else {
                 sum += speed;
                 if (bb - sum > 0) {
@@ -475,6 +488,7 @@
                 }
             }
         }, 5);//间隔时间不要过小或过大,否则最终花费时间会与设定的完成时间误差较大,且设置间隔过大会卡顿没有平缓过度效果
+
     }
 
     /**
@@ -511,6 +525,7 @@
                 if (slide in el) {
                     delete el[slide]
                 }
+                return finish;
             } else {
                 sum += speed;
                 if (bt - sum > 0) {
@@ -543,19 +558,20 @@
         }, 5);
     }
 
-/*
-    /!**
-     * dom元素以滑动方式在显示隐藏状态之间切换
-     * @param {HTMLElement} el -dom节点对象
-     * @param {number} millisecond 滑动速度(完成滑动所需毫秒时间),默认值300
-     *!/
-    function slideToggle(el, millisecond) {
-        getStyle(el, 'display') === 'none'
-        || elData(el, 'slideToggle') === 'slideup'
-            ? slideDown(el, millisecond)
-            : slideUp(el, millisecond);
-    }
-*/
+    /*
+        /!**
+         * dom元素以滑动方式在显示隐藏状态之间切换
+         * @param {HTMLElement} el -dom节点对象
+         * @param {number} millisecond 滑动速度(完成滑动所需毫秒时间),默认值300
+         *!/
+        function slideToggle(el, millisecond) {
+            getStyle(el, 'display') === 'none'
+            || elData(el, 'slideToggle') === 'slideup'
+                ? slideDown(el, millisecond)
+                : slideUp(el, millisecond);
+        }
+    */
+    //#endregion
 
     //#endregion
 
@@ -865,7 +881,7 @@
                     if (this.classList.contains('submenu')) {//有子菜单，则展开或折叠
                         if (this.classList.contains('iconopen')) {
                             this.parentNode.querySelectorAll('.iconopen,ul').forEach(function (item) {
-                                item.tagName === 'A' ? item.classList.remove('iconopen') : slideUp(item, speed);
+                                item.tagName === 'A' ? item.classList.remove('iconopen') :slideUp(item, speed);
                             });
                         } else {
                             this.classList.add('iconopen');
